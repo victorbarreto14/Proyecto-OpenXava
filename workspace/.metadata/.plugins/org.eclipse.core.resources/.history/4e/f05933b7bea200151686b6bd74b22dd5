@@ -1,0 +1,5 @@
+package org.openxava.invoicing.model;
+
+public class Product {
+
+}

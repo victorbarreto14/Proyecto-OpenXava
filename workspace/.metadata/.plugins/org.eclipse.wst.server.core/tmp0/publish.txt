@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Mon Dec 14 20:59:31 PYST 2015
+org.eclipse.jst.j2ee.server\:Addons=WEB-INF/lib/Addons.jar
+org.eclipse.jst.j2ee.server\:OpenXava=WEB-INF/lib/OpenXava.jar

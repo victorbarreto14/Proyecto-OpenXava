@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+version="1.0">
+<!-- Tomcat + PostgreSQL -->
+<persistence-unit name="default">
+<non-jta-data-source>java:comp/env/jdbc/InvoicingDS</non-jta-data-source>
+<class>org.openxava.session.GalleryImage</class>
+<properties>
+<!-- Dialecto de PostgreSQL -->
+<property name="hibernate.dialect"
+value="org.hibernate.dialect.PostgreSQLDialect"/>
+</properties>
+</persistence-unit>
+<!-- JUnit PostgreSQL -->
+<persistence-unit name="junit">
+<properties>
+<!-- Clase del controlador de PostgreSQL -->
+<property name="hibernate.connection.driver_class"
+value="org.postgresql.Driver"/>
+<!-- Dialecto de PostgreSQL -->
+<property name="hibernate.dialect"
+value="org.hibernate.dialect.PostgreSQLDialect"/>
+<property name="hibernate.connection.url"
+value="jdbc:postgresql://localhost/invoicing"/>
+<!-- El usuario de la base datos -->
+<property name="hibernate.connection.username" value="postgres"/>
+<!-- La contraseña del usuario de la base de datos -->
+<property name="hibernate.connection.password" value="openxava"/>
+</properties>
+</persistence-unit>
+</persistence>
